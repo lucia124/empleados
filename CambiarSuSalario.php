@@ -4,9 +4,9 @@ function insertarSalario($trabajador,$salario){
 	$conexion=$db;
 	/*modificar fecha */
 	$fecha=date('Y-m-d');
-	$nuevafecha = '9999-12-31';
+	$nuevafecha = '9999-01-01';
 	$sentencia='update salaries set to_date="'.$fecha.'"
-	where emp_no= '.$trabajador .' and to_date="9999-01-01"';
+	where emp_no= '.$trabajador .' and to_date>"9999-01-01"';
 	echo $sentencia;
 	$linea=mysqli_query($conexion,$sentencia);
 
