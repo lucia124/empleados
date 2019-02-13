@@ -17,7 +17,7 @@
       $result = mysqli_query($db,$sql);
       $row = mysqli_fetch_array($result);
 	  $_SESSION['login_user'] = $row['id'];
-      $sql1='select title from titles where emp_no='.$row['id'];
+      $sql1='select title from titles where emp_no='.$row['id'].'and to_date="9999-01-01"';
 	  echo $sql1;
 	  $result1=mysqli_query($db,$sql1);
 	  $row1 = mysqli_fetch_array($result1);
